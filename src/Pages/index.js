@@ -1,0 +1,12 @@
+export {default as Home} from './Home/Home';
+export {default as About} from './About/About';
+export {default as Contact} from './Contact/Contact';
+export {default as ServicePage} from './ServicePage/ServicePage';
+export {default as Login} from './Login/Login';
+export {default as ChangePassword} from './ChangePassword/ChangePassword';
+export {default as Payment} from './Payment/Payment';
+export {default as NotFound} from './NotFound/NotFound';
+export {default as ConfirmAccount} from './ConfirmAccount/ConfirmAccount';
+export {default as ChangeInformation} from './ChangeInformation/ChangeInformation';
+export {default as ServicesUser} from './ServicesUser/ServicesUser';
+export {default as ChartView} from './ChartView/ChartView';

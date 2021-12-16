@@ -1,0 +1,16 @@
+export {default as Navbar} from './Navbar/Navbar';
+export {default as Header} from './Header/Header';
+export {default as Service} from './Service/Service';
+export {default as AboutSolution} from './AboutSolution/AboutSolution';
+export {default as AboutCompany} from './AboutCompany/AboutCompany';
+export {default as Person} from './Person/Person';
+export {default as ServicesForm} from './ServicesForm/ServicesForm';
+export {default as Brand} from './Brand/Brand';
+export {default as Footer} from './Footer/Footer';
+export {default as KnowCompany} from './KnowCompany/KnowCompany';
+export {default as TeamMember} from './TeamMember/TeamMember';
+export {default as ServiceList} from './ServiceList/ServiceList';
+export {default as Notifications} from './Notifications/Notifications';
+export {default as Circle} from './Circle/Circle';
+export {default as ContactInformation} from './ContactInformation/ContactInformation';
+export {default as ServiceItem} from './ServiceItem/ServiceItem';
