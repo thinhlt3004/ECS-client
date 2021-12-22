@@ -92,6 +92,10 @@ const ServicesForm = () => {
     }
   }, [paypalClientId, sdkReady]);
 
+  //Acount Demo Payments
+  //Email : sb-8txno7062653@personal.example.com
+  //Password : KPA25Zn/
+
   const successPaymentHandler = async (paymentResult) => {
     if (paymentResult.status === "COMPLETED") {
       const payload = {
