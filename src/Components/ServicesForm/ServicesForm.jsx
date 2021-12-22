@@ -293,7 +293,7 @@ const ServicesForm = () => {
             <div>{sdkReady && <PayPalButton onClick={handleValidate} />}</div>
           ) : (
             sdkReady && (
-              <PayPalButton amount={0.01} onSuccess={successPaymentHandler} />
+              <PayPalButton amount={getDays * chooseService.price + getDays * chooseService.price * 0.1} onSuccess={successPaymentHandler} />
             )
           )}
         </div>
