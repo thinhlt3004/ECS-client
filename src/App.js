@@ -57,7 +57,7 @@ const App = () => {
           {user ? <ChangePassword /> : <Redirect to="/" />}
         </Route>
         <Route exact path="/payment">
-          {user ? <Payment /> : <Redirect to="/" />}
+          <Payment />
         </Route>
         <Route exact path="/confirm/:token">
           <ConfirmAccount />

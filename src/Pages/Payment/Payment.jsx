@@ -14,6 +14,7 @@ const Payment = () => {
             history.push('/');
         }
     },[user, dispatch, history])
+    if(!user) return null;
     return (
         <div>
             <Header type="payment"/>

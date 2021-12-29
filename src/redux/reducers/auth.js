@@ -51,6 +51,12 @@ export default function AuthReducer(state = INITIAL_STATE.auth, action) {
         data: action.payload,
         errorMsg: "",
       };
+    case getType(getUserByToken.getUserByTokenFailure):
+      return {
+        ...state,
+        isLoading: false,
+        errorMsg: "",
+      };
     case getType(updatePassword.updatePasswordRequest):
       return {
         ...state,

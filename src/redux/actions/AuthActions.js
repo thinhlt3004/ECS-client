@@ -14,6 +14,7 @@ export const loginUser = createActions({
 export const getUserByToken = createActions({
     getUserByTokenRequest : (payload) => payload,
     getUserByTokenSuccess : (payload) => payload,
+    getUserByTokenFailure : (error) => error,
 })
 
 export const updatePassword = createActions({

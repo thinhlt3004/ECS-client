@@ -62,7 +62,7 @@ function* getUserByTokenProcess(action) {
       yield put(authActions.getUserByToken.getUserByTokenSuccess(res.data));
     }
   } catch (error) {
-    console.log(error);
+    yield put(authActions.getUserByToken.getUserByTokenFailure('You need to login again'));
   }
 }
 

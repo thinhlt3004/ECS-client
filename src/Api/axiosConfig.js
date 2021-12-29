@@ -3,7 +3,6 @@ import jwt_decode from 'jwt-decode';
 import {store} from './../redux/store/index';
 import * as authActions from './../redux/actions/AuthActions';
 const API_URL = "http://localhost:45757/api";
-
 export const publicRequest = axios.create({
     baseURL :  API_URL,
 });
@@ -19,10 +18,12 @@ privateRequest.interceptors.request.use(
         //console.log(token.accessToken);
         let currentDate = new Date(); 
         const decodedToken = jwt_decode(token.accessToken);
-        if (decodedToken.exp * 1000  < currentDate.getTime()) {     
-            store.dispatch(authActions.expireLogOut.expireLogOutRequest);    
+        if (decodedToken.exp * 1000  < currentDate.getTime()) {   
+            store.dispatch(authActions.expireLogOut.expireLogOutRequest());    
+            throw new Error('You need to login ');
+        }else{
+            config.headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem('authToken')).accessToken}`;
         }
-        config.headers["Authorization"] = `Bearer ${JSON.parse(localStorage.getItem('authToken')).accessToken}`;
         return config;   
     },
     (error) => {
